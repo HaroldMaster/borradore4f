@@ -74,6 +74,11 @@ body {
     padding: 0;
   }
 }
+@media only screen and (max-width: 37.5em) {
+  body {
+    padding: 0;
+  }
+}
 
 body {
   font-family: "Lato", sans-serif;
@@ -164,17 +169,37 @@ body {
 .u-margin-bottom-small {
   margin-bottom: 2rem !important;
 }
+@media only screen and (max-width: 56.25em) {
+  .u-margin-bottom-small {
+    margin-bottom: 1rem !important;
+  }
+}
 
 .u-margin-bottom-medium {
   margin-bottom: 4rem !important;
+}
+@media only screen and (max-width: 56.25em) {
+  .u-margin-bottom-medium {
+    margin-bottom: 2.5rem !important;
+  }
 }
 
 .u-margin-bottom-big {
   margin-bottom: 8rem !important;
 }
+@media only screen and (max-width: 56.25em) {
+  .u-margin-bottom-big {
+    margin-bottom: 6rem !important;
+  }
+}
 
 .u-margin-top-big {
   margin-top: 8rem !important;
+}
+@media only screen and (max-width: 56.25em) {
+  .u-margin-top-big {
+    margin-top: 6rem !important;
+  }
 }
 
 .btn, .btn:visited, .btn:link {
@@ -256,7 +281,14 @@ body {
 
 .composition {
   position: relative;
+  width: 80%;
+  margin: auto;
   margin-top: 9rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .composition {
+    margin-top: 3.5rem;
+  }
 }
 .composition__photo {
   width: 55%;
@@ -267,23 +299,56 @@ body {
   transition: all 0.2s;
   outline-offset: 2rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .composition__photo {
+    float: left;
+    position: relative;
+    width: 33.33%;
+  }
+}
 .composition__photo--p1 {
   left: 0;
   top: -2rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .composition__photo--p1 {
+    top: 0;
+    transform: scale(1.2);
+  }
 }
 .composition__photo--p2 {
   right: 0;
   top: 2rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .composition__photo--p2 {
+    top: -1rem;
+    transform: scale(1.3);
+    z-index: 100;
+  }
+}
 .composition__photo--p3 {
   left: 20%;
   top: 10rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .composition__photo--p3 {
+    top: 1rem;
+    left: 0;
+    transform: scale(1.1);
+  }
 }
 .composition__photo:hover {
   outline: 1.5rem solid #7ed56f;
   transform: scale(1.2);
   box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
   z-index: 20;
+}
+@media only screen and (max-width: 56.25em) {
+  .composition__photo:hover {
+    outline: 1.2rem solid #7ed56f;
+    outline-offset: 1rem;
+  }
 }
 .composition:hover .composition__photo:not(:hover) {
   transform: scale(0.8);
@@ -306,6 +371,11 @@ body {
   color: transparent;
   -webkit-background-clip: text;
 }
+@media only screen and (max-width: 56.25em) {
+  .feature-box__icon {
+    margin-bottom: -2rem;
+  }
+}
 .feature-box:hover {
   transform: translateY(-1.5rem) scale(1.05);
 }
@@ -327,6 +397,7 @@ body {
   overflow: hidden;
   border-radius: 1rem;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  text-align: center;
 }
 .card__side--front {
   background-color: white;
@@ -425,6 +496,44 @@ body {
   font-size: 6rem;
   font-weight: 100;
 }
+@media only screen and (max-width: 56.25em) {
+  .card {
+    height: auto;
+    border-radius: 1rem;
+    background-color: #fff;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  }
+  .card__side {
+    height: auto;
+    position: relative;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .card__side--front {
+    background-color: white;
+  }
+  .card__side--back {
+    transform: rotateY(0);
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+  }
+  .card:hover .card__side--front {
+    transform: rotateY(0);
+  }
+  .card__details {
+    padding: 0 3rem;
+  }
+  .card__cta {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0);
+    width: 100%;
+    padding: 7rem 4rem 4rem 4rem;
+  }
+  .card__price-box {
+    margin-bottom: 3rem;
+  }
+}
 
 .story {
   transform: skewX(-15deg);
@@ -437,6 +546,18 @@ body {
   font-size: 1.6rem;
   border-radius: 0.3rem;
   position: relative;
+}
+@media only screen and (max-width: 56.25em) {
+  .story {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 7rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .story {
+    transform: skewX(0deg);
+  }
 }
 .story__img {
   height: 100%;
@@ -458,8 +579,18 @@ body {
   backface-visibility: hidden;
   overflow: hidden;
 }
+@media only screen and (max-width: 37.5em) {
+  .story__shape {
+    transform: skewX(0deg);
+  }
+}
 .story__text {
   transform: skewX(15deg);
+}
+@media only screen and (max-width: 37.5em) {
+  .story__text {
+    transform: skewX(0deg);
+  }
 }
 .story__caption {
   position: absolute;
@@ -514,6 +645,11 @@ body {
   width: 80%;
   transition: all 0.3;
 }
+@media only screen and (max-width: 56.25em) {
+  .form__input {
+    width: 100%;
+  }
+}
 .form__input:focus {
   outline: none;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
@@ -544,6 +680,12 @@ body {
 .form__radio-group {
   width: 49%;
   display: inline-block;
+}
+@media only screen and (max-width: 56.25em) {
+  .form__radio-group {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 }
 .form__radio-label {
   font-size: 1.6rem;
@@ -595,7 +737,7 @@ body {
 .popup__content {
   background-color: #fff;
   width: 75%;
-  height: 80%;
+  height: auto;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -606,10 +748,22 @@ body {
   overflow: hidden;
   border-radius: 3px;
 }
+@media only screen and (max-width: 75em) {
+  .popup__content {
+    height: auto;
+  }
+}
 .popup__left {
   width: 33.33%;
   height: 100%;
   display: table-cell;
+}
+@media only screen and (max-width: 75em) {
+  .popup__left {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 }
 .popup__right {
   width: 66.66%;
@@ -617,9 +771,22 @@ body {
   vertical-align: middle;
   padding: 3rem 5rem;
 }
+@media only screen and (max-width: 75em) {
+  .popup__right {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
 .popup__img {
   display: block;
   width: 100%;
+}
+@media only screen and (max-width: 75em) {
+  .popup__img {
+    width: 49.5%;
+    display: inline-block;
+  }
 }
 .popup__text {
   font-size: 1.4rem;
@@ -693,6 +860,7 @@ body {
 @media only screen and (max-width: 56.25em) {
   .row {
     max-width: 50rem;
+    padding: 0 3rem;
   }
 }
 .row:not(:last-child) {
@@ -747,6 +915,7 @@ body {
   text-align: center;
   height: 10rem;
   object-fit: cover;
+  margin-bottom: 3rem;
 }
 .footer__logo {
   width: 20rem;
@@ -756,6 +925,12 @@ body {
   border-top: 1px solid #000;
   padding-top: 2rem;
   display: inline-block;
+}
+@media only screen and (max-width: 56.25em) {
+  .footer__navigation {
+    width: 100%;
+    text-align: center;
+  }
 }
 .footer__list {
   list-style: none;
@@ -784,6 +959,13 @@ body {
   padding-top: 2rem;
   display: inline-block;
   float: right;
+}
+@media only screen and (max-width: 56.25em) {
+  .footer__copyright {
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
 }
 
 .navigation__checkbox {
@@ -821,7 +1003,7 @@ body {
   position: fixed;
   top: 6.5rem;
   right: 6.5rem;
-  background-image: radial-gradient(#55c57a, #28b485);
+  background-image: radial-gradient(#b42828 0%, #b42828 7%, #2870b4 17%, #ffb900 27%);
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
 }
@@ -829,6 +1011,7 @@ body {
   .navigation__background {
     top: 4.5rem;
     right: 5.5rem;
+    background-image: radial-gradient(#ffb900 0%, #ffb900 7%, #2870b4 17%, #b42828 27%);
   }
 }
 @media only screen and (max-width: 37.5em) {
@@ -842,7 +1025,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 1500;
   opacity: 0;
   width: 0;
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -865,7 +1048,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 3rem;
-  font-weight: 400;
+  font-weight: 500;
   color: #fff;
   padding: 1rem 2rem;
   text-decoration: none;
@@ -876,6 +1059,8 @@ body {
   display: inline-block;
   transform: perspective(1px) translateZ(0);
   backface-visibility: hidden;
+  opacity: 0;
+  visibility: hidden;
   /* font-smooth: 100em; */
   /* font-smooth: never; */
 }
@@ -885,7 +1070,7 @@ body {
 }
 .navigation__link:hover, .navigation__link:active {
   background-position: 100%;
-  color: #7ed56f;
+  color: #000;
   transform: perspective(1px) translate3d(1rem, 0, 0);
   /*  animation-name: example;
     animation-timing-function: infinite;*/
@@ -896,6 +1081,10 @@ body {
 .navigation__checkbox:checked ~ .navigation__nav {
   opacity: 1;
   width: 100%;
+}
+.navigation__checkbox:checked ~ .navigation__nav .navigation__list .navigation__link {
+  opacity: 1;
+  visibility: visible;
 }
 .navigation__icon {
   position: relative;
@@ -939,8 +1128,13 @@ body {
 
 .section-about {
   background-color: #f7f7f7;
-  padding: 20rem 0;
+  padding: 23rem 0;
   margin-top: -20vh;
+}
+@media only screen and (max-width: 56.25em) {
+  .section-about {
+    padding: 19rem 0;
+  }
 }
 
 .section-features {
@@ -953,16 +1147,31 @@ body {
 .section-features > * {
   transform: skewY(5deg);
 }
+@media only screen and (max-width: 56.25em) {
+  .section-features {
+    padding: 15rem 0;
+  }
+}
 
 .section-tours {
   background-color: #f7f7f7;
   padding: 20rem 0 10rem 0;
   margin-top: -7rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .section-tours {
+    padding: 15rem 0 5rem 0;
+  }
+}
 
 .section-stories {
   padding: 5rem 0;
   position: relative;
+}
+@media only screen and (max-width: 56.25em) {
+  .section-stories {
+    padding: 3rem 0;
+  }
 }
 
 .section-book {
@@ -973,13 +1182,34 @@ body {
 .book {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(/img/nat-10.jpg);
   background-size: 100%;
-  height: 50rem;
   border-radius: 2px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
+}
+@media only screen and (max-width: 75em) {
+  .book {
+    background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 70%, rgba(255, 255, 255, 0.9) 70%, transparent 50%), url(/img/nat-10.jpg);
+    background-size: cover;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .book {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url(/img/nat-10.jpg);
+    background-size: cover;
+  }
 }
 .book__form {
   width: 50%;
   padding: 6rem;
+}
+@media only screen and (max-width: 75em) {
+  .book__form {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .book__form {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
